@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Tours = () => {
+const Tours = (params) => {
   return (
     <div>
-      hello
+      <img src={params.image} alt={params.name} />
+      <h3>{params.name}</h3>
     </div>
   );
 }
