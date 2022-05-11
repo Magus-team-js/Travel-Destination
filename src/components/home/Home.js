@@ -1,23 +1,19 @@
-import React from 'react';
 import Header from '../header/Header'
 import Tours from '../tours/Tours'
 import Footer from '../footer/Footer'
-const travData = require('../../data/db.json');
+import cardData from '../../data/db.json';
+
 
 
 const Home = () => {
   return (
     <>
       <Header title='Travel Destination' />
-
-     {
-        travData.map(element => {
-          return (
-            <Tours image={element.image} alt={element.name} name={element.name} />
-          )
-        })
+      {
+        cardData.map(card => (
+          <Tours name={card.name} image={card.image} id={card.id} />
+        ))
       }
-
       <Footer url='www.facebook.com' url2='www.Instagram.com' url3='www.LinkedIn.com' name='Bahaa/Esraa' />
     </>
   );

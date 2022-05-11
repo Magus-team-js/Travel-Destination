@@ -1,11 +1,19 @@
-import React from 'react';
 
-const Tours = (params) => {
+import Tour from "./tour/Tour";
+
+
+const Tours = (props) => {
+
+
   return (
-    <div>
-      <img src={params.image} alt={params.name} />
-      <h3>{params.name}</h3>
-    </div>
+    <>
+      <section className="hero">
+        <div className="container">
+          <Tour name={props.name} image={props.image} id={props.id} />
+          {/* <h1>{props.name}</h1> */}
+        </div>
+      </section>
+    </>
   );
 }
 

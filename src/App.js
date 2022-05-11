@@ -1,12 +1,15 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/home/Home.js';
+import TourDetails from './components/TourDetails/TourDetails';
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/city/:id" element={<TourDetails />} />
+    </Routes>
   );
 }
 
