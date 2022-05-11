@@ -6,8 +6,8 @@ function Tour(props) {
       <Link to={`/city/${props.id}`}>
         <div className="tours-section">
           <h1>{props.name}</h1>
-
-          <img src={props.image} alt={props.name} />
+          <img src={props.image} alt={props.name} style={{ width: "50rem" }} />
+          <hr/>
         </div>
       </Link>
     </>
